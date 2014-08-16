@@ -1,0 +1,36 @@
+{
+	"name": "kr15h/composer-example",
+	"description": "Package to build custom Composer WordPress example",
+	"authors": [
+		{
+			"name": "Krisjanis Rijnieks",
+			"email": "krisjanis@rijnieks.lv"
+		}
+	],
+	"repositories": [
+		{
+			"type": "package",
+			"package": {
+				"name": "wordpress/wordpress",
+				"type": "webroot",
+				"version": "3.9.2",
+				"dist": {
+					"url": "https://github.com/WordPress/WordPress/archive/3.9.2.zip",
+					"type": "zip"
+				},
+				"require": {
+					"fancyguy/webroot-installer": "1.1.0"
+				}
+			}
+		}
+	],
+	"require": {
+		"php": ">=5.3.0",
+		"wordpress/wordpress": "3.9.2",
+		"fancyguy/webroot-installer": "1.1.0"
+	},
+	"extra": {
+		"webroot-dir": "wp",
+		"webroot-package": "wordpress/wordpress"
+	}
+}
