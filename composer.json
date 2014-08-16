@@ -9,6 +9,10 @@
 	],
 	"repositories": [
 		{
+			"type": "composer",
+			"url": "http://wpackagist.org"
+		},
+		{
 			"type": "package",
 			"package": {
 				"name": "wordpress/wordpress",
@@ -27,9 +31,14 @@
 	"require": {
 		"php": ">=5.3.0",
 		"wordpress/wordpress": "3.9.2",
-		"fancyguy/webroot-installer": "1.1.0"
+		"fancyguy/webroot-installer": "1.1.0",
+		"wpackagist/advanced-custom-fields": "*",
+		"wpackagist/posts-to-posts": "1.4.x"
 	},
 	"extra": {
+		"installer-paths": {
+			"app/plugins/{$name}/": ["type:wordpress-plugin"]
+		},
 		"webroot-dir": "wp",
 		"webroot-package": "wordpress/wordpress"
 	}
